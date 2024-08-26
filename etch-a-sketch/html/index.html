@@ -1,0 +1,41 @@
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>draw a pp or something</title>
+  <link href="styles/main.css" rel="stylesheet" type="style"/>
+</head>
+<body>
+  <header>
+    <div id="header-content">
+      <h1 id="header">Start drawing or something</h1>
+    </div>
+    <!-- Split into left and right containers to spread UI elements more efficiently-->
+    <!-- (groups together into one column in mobile mode)-->
+  </header>
+  <div id="ui">
+    <div id="left">
+      <div id="slider">
+        <!-- Size Change/Slider created in script.js file-->
+      </div>
+      <div id="color-pickers">
+        <!-- Brush and Background color pickers created in script.js file-->
+      </div>
+    </div>
+    <div id="center" if="center">
+      <div id="canvas" ondragstart="return false;" ondrop="return false;">
+        <!-- Canvas created in script.js file-->
+      </div>
+    </div>
+    <div id="right">
+      <div id="buttons">
+        <!-- Buttons created in script.js file-->
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content"><span>Copyright @
+        <script>document.write(new Date().getFullYear())</script></span><span>&nbsp;papatenko&nbsp;</span><a href="https://github.com/papatenko/mc-sketch"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub logo"/></a></div>
+  </footer>
+  <script src="script.js"></script>
+</body>

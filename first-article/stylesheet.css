@@ -1,0 +1,69 @@
+/* If it says there is a empty ruleset, that means they'res no declarations  
+Notes: Appearently this "combine property" thing doesn't seem to work
+*/
+h2{
+    /* Sets the font(or a list of fonts) */
+    font-family: Verdana, Arial;
+    /* Sets the font size, can have variable types of <percent> or <length> */
+    font-size: 40px;
+
+    font-weight: bold;
+
+    /* Can be underline, none, or a bunch of othr values to decorate the text*/
+    text-decoration:underline;
+    /* Alligns text to whatever side, variables can also be left, center or right */
+    text-align: center;
+
+    /* Sets the background color */
+    background-color:black;
+    /* Sets the color of the text*/
+    color: white;
+
+            /*horizotal-vertical-blur radias-color*/
+    text-shadow:    4px     4px     0px      gray;
+
+    padding-left: 0%;
+    padding-right: 0%;
+
+    /* Line height value generally ranges form 1-2 with the recommomended being 1.5, 
+    it's measured the same way like it is in word documents 
+    */
+    line-height: 1.6;
+}
+
+/* Commnts appear to work the same as if it was java */ 
+p{
+    font-family: "Arial", sans-serif;
+    font-size: 30px;
+    color: black;
+
+    text-align: center;
+    
+    /* Padding being the space form the edges of the screen */
+    /* When using px, the pad on the left side stays the same no matter what */
+    /* When using %, the pad on both side changes depending on the aspect ratio (preferable) */
+    padding-left: 30%;
+    padding-right: 30%;
+
+    line-height: 1.5;
+}
+/* when placing :: after a element, a lot of sub properities  */
+p::first-line{
+    letter-spacing: 4px;
+    word-spacing: 4px; 
+
+}
+
+a{
+    font-family: "Arial", sans-serif;
+    font-size: 30px;
+    color:blue;
+
+    text-align: right;
+    /* appearently, text-alignment doesn't work with anchor attributes */
+    padding-left: 40%;
+    padding-right: 40%;
+
+    line-height: 1.5;
+}
+    

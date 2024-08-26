@@ -1,0 +1,33 @@
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+  title draw a pp or something
+  link(href="styles/main.css", rel="stylesheet", type="style") 
+
+body
+  header
+    #header-content
+      h1#header Start drawing or something
+    // Split into left and right containers to spread UI elements more efficiently
+    // (groups together into one column in mobile mode)
+  #ui
+    #left
+      #slider
+        // Size Change/Slider created in script.js file
+      #color-pickers
+        // Brush and Background color pickers created in script.js file
+    #center(if='center')
+      #canvas(ondragstart="return false;" ondrop="return false;")
+        // Canvas created in script.js file
+    #right
+      #buttons
+        // Buttons created in script.js file
+  footer
+    .footer-content
+      span Copyright @
+        script.
+          document.write(new Date().getFullYear())
+      span &nbsp;papatenko&nbsp;
+      a(href='https://github.com/papatenko/mc-sketch')
+        img(src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png', alt='GitHub logo')
+  script(src='script.js')

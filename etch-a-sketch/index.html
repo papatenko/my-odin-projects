@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MC Sketch</title>
+    <link href="styles/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <video autoplay muted loop id="minecraftBackground">
+        <source src="vid/minecraftBackground.mp4" type="video/mp4" loop="true">
+    </video>
+    <audio autoplay>
+        <source src="music/C418 - Moog City 2 (Minecraft Volume Beta).mp3" type="audio/mp3" loop="true">
+    </audio>
+    <div id="content">
+        <header>
+            <img id="mc-sketch" src="img/Mc-sketch-10-30-2023.png" alt="mc-sketch">
+            <a id="links" href="https://github.com/papatenko">woohoo github</a>
+        </header>
+        <!-- Split into left and right containers to spread UI elements more efficiently-->
+        <!-- (groupts together into one column in mobile mode)-->
+        <div id="ui">
+            <div id="left">
+                <div id="slider">
+                    <!-- Size Change/Slider created in script.js file -->
+                </div>
+                <div id="color-pickers">
+                    <!-- Brush and Background color pickers created in script.js file -->
+                </div>
+            </div>
+            <div if="center">
+                <div id="canvas" ondragstart="return false;" ondrop="return false;">
+                    <!-- Canvas created in script.js file -->
+                </div>
+            </div>
+            <div id="right">
+                <div id="buttons">
+                    <!-- Buttons created in script.js file -->
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>Copyright @
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+            </span>
+            <span>&nbsp;papatenko&nbsp;</span>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

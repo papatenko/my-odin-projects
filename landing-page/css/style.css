@@ -1,0 +1,174 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* GUI elements that don't change depending on the space it's within*/
+
+button {
+  width: 240px;
+  height: 40px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0%);
+  border-radius: 8px;
+  border: solid rgba(255, 255, 255, 100%);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+li {
+  display: inline;
+  margin: 16px;
+}
+a {
+  color: rgb(225, 225, 225);
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: underline;
+}
+
+/* Header */
+
+.header-container {
+  background-image: url("../img/backgrounds/blue.jpg");
+  background-size: cover;
+}
+
+.header,
+.description {
+  display: flex;
+  justify-content: space-between;
+  text-shadow: 2px 2px 5px black;
+}
+
+.header {
+  align-items: center;
+  height: 72px;
+  padding: 0 15%;
+  margin: 0;
+}
+.header .left img {
+  height: 72px;
+}
+
+.description {
+  color: white;
+  padding: 32px 15%;
+  align-items: center;
+}
+.description .text {
+}
+.description img {
+  width: 300px;
+  border-radius: 4px;
+}
+.header .left {
+  display: flex;
+  align-items: center;
+}
+.header .left h1 {
+  font-weight: 800;
+  color: white;
+}
+
+/* Information + Cards */
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  color: black;
+}
+
+.information h1 {
+  padding-bottom: 24px;
+}
+
+.information img {
+  height: 220px;
+  width: 220px;
+  border-radius: 24px;
+}
+.information .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+.information .cards .card {
+  width: 220px;
+  text-align: center;
+}
+
+/* Lower Half: qoute, buy-one-already button, and copyright */
+
+.lower-half {
+  background-image: url("../img/backgrounds/sunset.jpg");
+  background-size: cover;
+}
+
+.quote {
+  flex-direction: column;
+  padding-top: 160px;
+  padding-left: 25%;
+  padding-right: 25%;
+  background-size: cover;
+  color: white;
+}
+
+.quote .phrase {
+  font-size: 36px;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+}
+.quote .speaker {
+  font-size: 24px;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+}
+
+.buy-one-already {
+  padding: 160px 10%;
+}
+.buy-one-already .container {
+  background: rgba(0, 0, 0, 50%);
+  border-radius: 16px;
+  padding: 40px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  height: 80px;
+  background: rgba(0, 0, 0, 50%);
+  border-radius: 16px 16px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
