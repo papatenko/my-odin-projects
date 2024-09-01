@@ -2,14 +2,21 @@
 
 _Where I keep a list of all my awful odin projects._
 
+## Colors
+
+- Accent: #fcc41b
+- Secondary: #99760f
+- Primary: #e8d18d
+- Background: #151207
+- Text: #f6f4ed
+
 ## Odin Roadmap
 
-- [ ] `N/A`
+- [ ] Finish Library
 
 ## Feature Roadmap
 
-- [ ] Custom CSS for list
-- [ ] Header
-- [ ] Footer
+- [x] Custom CSS for list
+- [x] Header
 - [ ] Inject HTML and CSS `back buttons` onto each page
 - [ ] Animations? Maybe?
