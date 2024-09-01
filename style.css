@@ -8,15 +8,18 @@
   color: var(--accent-color);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  margin: 12px;
 }
 
 header,
 footer {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.wrapper {
+.list-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,13 +31,11 @@ footer {
 .js-course {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 .split {
   display: flex;
   justify-content: space-between;
-  padding: 8px;
-  border-radius: 10px;
 }
 
 .right-title {
@@ -50,7 +51,12 @@ a {
   font-size: 24px;
 }
 
-footer {
+.footer-wrapper {
   color: var(--secondary-color);
-  text-align: center;
+  flex-basis: 600px;
+  padding: 12px;
+}
+h3,
+h4 {
+  margin-block: 12px;
 }
