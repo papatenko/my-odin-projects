@@ -10,33 +10,37 @@
   font-weight: bold;
 }
 
-.list {
+header,
+footer {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+}
+.list {
+  flex-basis: 600px;
 }
 .foundations,
 .js-course {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  width: 600px;
   gap: 10px;
 }
 .split {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 8px;
   border-radius: 10px;
 }
 
-img {
-  max-inline-size: 48px;
-  block-size: auto;
-  border-radius: 10px;
+.right-title {
+  text-align: right;
 }
+
 a {
   background-color: var(--primary-color);
   border-radius: 12px;
@@ -44,4 +48,9 @@ a {
   color: var(--bg-color);
   text-decoration: none;
   font-size: 24px;
+}
+
+footer {
+  color: var(--secondary-color);
+  text-align: center;
 }

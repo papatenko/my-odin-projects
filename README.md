@@ -1,6 +1,6 @@
 # My Odin Projects
 
-_Where I keep a list of all my awful odin projects._
+[ _Where I keep a list of all my awful odin projects._ ](https://papatenko-odin.netlify.app/)
 
 ## Colors
 
