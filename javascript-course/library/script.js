@@ -6,7 +6,7 @@ const Author = document.getElementById("author");
 const Pages = document.getElementById("pages");
 const Read = document.getElementById("read");
 const List = document.getElementById("list");
-const Overlay = document.getElementById("overlay");
+const Popup = document.getElementById("popup");
 
 class Book {
   constructor(title, author, pages, read) {
@@ -48,9 +48,15 @@ function addBookToLibrary() {
   Read.checked = false;
   // Display Library
   displayLibrary();
+  toggleOverlay();
 }
 
-function toggleOverlay() {}
+function toggleOverlay() {
+  var currentDisplay = Popup.style.display.toString();
+  if (currentDisplay === "none" || currentDisplay.length === 0) {
+    Popup.style.display = "flex";
+  } else Popup.style.display = "none";
+}
 
 function displayLibrary() {
   let libraryToString = "";

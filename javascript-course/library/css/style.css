@@ -1,5 +1,11 @@
+:root {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 #popup {
-  display: flex;
+  /* display: flex; */
+  display: none;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -7,15 +13,11 @@
   left: 0px;
   width: 100vw;
   height: 100vh;
-  display:none;
 }
 
-#popup #overlay {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.7);
-  z-index: 1;
+#popup #title {
+  display: flex;
+  flex-direction: row;
 }
 
 form {
@@ -23,25 +25,24 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   background-color: black;
-  width: auto;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 10px;
+  padding: 12px;
+  margin: 12px;
+  border-radius: 12px;
   color: white;
   z-index: 2;
 }
 
 h1 {
-  margin: 10px;
+  margin: 12px;
   color: white;
   text-align: center;
 }
 
 #library {
   background-color: grey;
-  color:  white;
+  color: white;
   text-shadow: 1px 1px 2px black;
   margin: 10px;
   padding: 1px 10px 10px 10px;
