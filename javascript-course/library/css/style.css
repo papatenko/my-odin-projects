@@ -1,6 +1,38 @@
 :root {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  --bg-color: rgba(255, 255, 255, 0.1);
+  --border-blurry: rgba(255, 255, 255, 0.025);
+  --blur-amount: blur(48px);
+  --blur-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.5);
+  --bd-radius: 12px;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: url("../img/library.png");
+  background-size: cover;
+  min-height: 100vh;
+  margin: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#popup,
+#book,
+#library #book-adder,
+header,
+footer {
+  background-color: var(--bg-color);
+  backdrop-filter: var(--blur-amount);
+  border: solid 2px var(--border-blurry);
+  box-shadow: var(--blur-shadow);
+}
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 #popup {
@@ -8,43 +40,183 @@
   display: none;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
+  gap: 12px;
+  border-radius: var(--bd-radius);
 }
 
-#popup #title {
+#library-container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding-top: 12px;
+}
+
+#library {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#book-adder {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
+
+input,
+form button,
+#list button {
+  background-color: var(--bg-color);
+  border: solid 2px var(--border-blurry);
+  color: white;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+#book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 150px;
+  padding: 12px;
+  color: white;
+  text-align: center;
+  text-wrap: wrap;
+  border-radius: var(--bd-radius);
+}
+
+#book-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+#book p {
+  margin: 8px;
+}
+
+#book button {
+  color: white;
+  margin-top: 12px;
+  border-radius: var(--bd-radius);
 }
 
 form {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  background-color: black;
+  gap: 12px;
   padding: 12px;
-  margin: 12px;
-  border-radius: 12px;
+  border-radius: var(--bd-radius);
   color: white;
-  z-index: 2;
 }
 
 h1 {
   margin: 12px;
-  color: white;
-  text-align: center;
 }
 
-#library {
-  background-color: grey;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: white;
-  text-shadow: 1px 1px 2px black;
-  margin: 10px;
-  padding: 1px 10px 10px 10px;
-  border-radius: 10px;
+  border-radius: 16px;
+  flex-wrap: wrap;
+}
+
+header #left-side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px; /* Emoji icon causes it to look uneven at 16px */
+}
+header #right-side {
+  display: flex;
+  align-items: center;
+}
+
+header #change-bg-wrapper,
+header #reset-bg {
+  margin-right: 16px;
+  background-color: var(--bg-color);
+  border: solid 2px var(--border-blurry);
+  border-radius: var(--bd-radius);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px;
+  text-align: center;
+  color: white;
+}
+
+#right-side label {
+  cursor: pointer;
+  user-select: none;
+}
+
+#change-background::-webkit-file-upload-button {
+  background-color: var(--bg-color);
+  border: solid 2px var(--border-blurry);
+  border-radius: var(--bd-radius);
+  color: white;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+header button span {
+  display: inline-block;
+  line-height: normal;
+}
+
+#footer-container {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  /* margin in body causes the footer to clip outside the website, following line fixes that */
+  margin: 16px;
+  border-radius: var(--bd-radius);
+  flex-basis: fill;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+::placeholder {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+button {
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+button:hover,
+button:focus,
+button:active,
+#book-adder:hover,
+#book-adder:focus,
+#book-adder:active,
+#change-bg-wrapper:hover,
+#change-bg-wrapper:focus,
+#change-bg-wrapper:active {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }

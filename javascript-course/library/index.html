@@ -7,40 +7,74 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <button onclick="toggleOverlay()" type="button" id="book-adder">
-      Add Book
-    </button>
-    <div id="popup">
-      <div id="left"></div>
-      <form>
-        <div id="title">
-          <h1>Add Book</h1>
-          <button onclick="toggleOverlay()" type="button" id="book-adder">
-            X
-          </button>
+    <header>
+      <div id="left-side">
+        <h1>📚 Library</h1>
+      </div>
+      <div id="right-side">
+        <!-- Probably the only instance for where ID is actually necessary, 
+        other I shoulda wrote all these in classes lol-->
+        <div id="change-bg-wrapper">
+          <label for="change-bg">Change Background</label>
+          <input
+            type="file"
+            id="change-bg"
+            accept="image/jpeg, image/png, image/jpg"
+            onchange="changeBackground()"
+          />
         </div>
-        <label for="title">Title </label>
-        <input id="title" type="text" name="title" value="" />
-        <br />
-        <label for="author">Author </label>
-        <input id="author" type="text" name="author" value="" />
-        <br />
-        <label for="pages">Number of Pages </label>
-        <input id="pages" type="number" name="pages" value="" />
-        <br />
-        <div>
-          <label for="read">Finished Reading? </label>
-          <input id="read" type="checkbox" name="read" value="" />
-        </div>
-        <button onclick="addBookToLibrary()" type="button" id="book-adder">
-          Add Book
+        <button onclick="resetBackground()" type="button" id="reset-bg">
+          <img src="./img/reset.png" alt="Reset Background" />
         </button>
-      </form>
-      <div id="right"></div>
+      </div>
+    </header>
+    <div id="library-container">
+      <div id="library">
+        <div id="popup">
+          <form>
+            <input
+              id="title"
+              type="text"
+              name="title"
+              placeholder="Title of Book"
+              maxlength="20"
+            />
+            <input
+              id="author"
+              type="text"
+              name="author"
+              placeholder="Author of Book"
+              maxlength="20"
+            />
+            <input
+              id="pages"
+              type="number"
+              name="pages"
+              placeholder="Number of Pages"
+              maxlength="5"
+            />
+            <div>
+              <label for="read">Finished Reading? </label>
+              <input id="read" type="checkbox" name="read" value="" />
+            </div>
+            <button onclick="addBookToLibrary()" type="button">Add Book</button>
+          </form>
+        </div>
+        <button onclick="toggleOverlay()" type="button" id="book-adder">
+          <img src="./img/plus.png" alt="Add Book" id="book-adder-img" />
+        </button>
+      </div>
     </div>
-    <div id="library">
-      <h1>Library</h1>
-      <div id="list"></div>
+    <div id="footer-container">
+      <footer>
+        <span
+          >Copyright @
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+        </span>
+        <span>&nbsp;<a href="https://github.com/papatenko">papatenko</a></span>
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>
